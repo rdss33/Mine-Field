@@ -1,0 +1,102 @@
+div#setup-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 8em;
+}
+
+#setup-area h2.field-name{
+    font-family: "Koh Santepheap", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+    color: var(--secondary-color);
+    text-shadow: -3px 0 var(--shade-color), 0 3px var(--shade-color), 3px 0 var(--shade-color), 0 -3px var(--shade-color);
+    font-size: 2em;
+    margin-bottom: .25em;
+}
+
+#setup-area h2 span{
+    margin-left: 2em;
+}
+
+#setup-area input#mine-slider{
+    width: 20em;
+    border-radius: 0%;
+    background-color: white;
+    accent-color: var(--primary-color);
+}
+
+#setup-area input#mine-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: black;
+    width: 1em;
+    height: 1em;
+    border-radius: 0%;
+}
+
+#setup-area div#currency-setup{
+    place-self: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+#setup-area div#currency-setup input#currency-input{
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--shade-color);
+    color: var(--secondary-color);
+    outline: 2px solid var(--primary-color);
+    height: 1em;
+    font-size: 1.5em;
+    width: 7em;
+    border: 0px;
+    padding-left: 1em;
+}
+#setup-area div#currency-setup input#currency-input::-webkit-outer-spin-button,
+#setup-area div#currency-setup input#currency-input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#setup-area div#currency-setup input#currency-input:focus,#setup-area div#currency-setup input#currency-input:hover{
+    outline: 2px solid var(--highlight-color);
+}
+
+#setup-area button#start-game,
+#setup-area button#reset-game{
+    margin-top: 1em;
+    grid-column: span 2;
+    font-size: 2em;
+    background-color: var(--primary-color);
+    border: 3px solid var(--shade-color);
+    opacity: .5;
+    color: var(--shade-color);
+}
+
+#setup-area button#reset-game{
+    background-color: var(--fail-color);
+}
+
+#setup-area button#start-game:hover,
+#setup-area button#reset-game:hover{
+    opacity: 1;
+}
+
+#setup-area button#start-game:focus,
+#setup-area button#reset-game:focus{
+    border: 0px;
+    outline: 3px solid var(--highlight-color)
+}
+
+@media (max-width: 600px){
+    #setup-area input#mine-slider{
+        width: 8em;
+    }
+    #setup-area h2 span{
+        margin-left: 1.5em;
+    }
+}

@@ -1,0 +1,38 @@
+#mine-field button{
+    width: 10em;
+    height: 10em;
+    margin: 0px;
+    background-color: var(--primary-color);
+    border: .25em solid var(--shade-color);
+    border-radius: 5%;
+    border-bottom: .5em solid var(--shade-color);
+}
+
+#mine-field button:disabled{
+    background-color: var(--shade-color)
+}
+
+#mine-field button.revealed{
+    background-color: var(--highlight-color);
+    border: .25em solid var(--primary-color);
+    border-bottom: .5em solid var(--primary-color);
+}
+
+#mine-field button.revealed.boom{
+    background-color: var(--fail-color);
+}
+
+@media (max-width: 600px){
+    #mine-field button{
+        width: 5em;
+        height: 5em;
+    }
+}
+@media (max-width: 350px){
+    #mine-field button{
+        width: 4em;
+        height: 4em;
+    }
+}
+
+
